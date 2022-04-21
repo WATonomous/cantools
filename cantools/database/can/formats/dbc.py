@@ -286,7 +286,7 @@ class Parser(textparser.Parser):
             Optional(choice('BU_SG_REL_', 'BU_BO_REL_')),
             'STRING',
             'WORD',
-            choice(DelimitedList('STRING'), OneOrMore('NUMBER')),
+            Optional(choice(DelimitedList('STRING'), OneOrMore('NUMBER'))),
             ';')
 
         attribute_definition_default_rel = Sequence(
